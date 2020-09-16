@@ -1,5 +1,5 @@
 object ApplicationConfig {
-    val id = "com.simtop.billionbeers"
+    val id = "AndroidDaggerHilt"
 
     const val compileSdk = 29
     const val minSdk = 21

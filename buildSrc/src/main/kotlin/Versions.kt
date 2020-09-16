@@ -30,7 +30,7 @@ object Versions {
 
     const val espresso_core: String = "3.3.0"
 
-    const val mockito_core: String = "3.2.4" // available: "3.5.10"
+    const val mockito_core: String = "3.5.10"
 
     const val lint_gradle: String = "27.0.1"
 

@@ -22,15 +22,8 @@ class MainPresenterTest {
         presenter = MainPresenter(view, getWelcomeMessageDataSource)
     }
 
-    @DisplayName(
-        """
-            Given welcome message
-            When view is created
-            Then show welcome message
-        """
-    )
     @Test
-    fun shouldShowWelcomeMessage() {
+    fun `Given welcome message When view is created Then show welcome message`() {
         givenWelcomeMessage()
 
         presenter.onViewCreated()

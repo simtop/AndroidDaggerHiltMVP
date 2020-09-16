@@ -42,8 +42,12 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     override fun showWelcomeMessage(welcomeMessage: WelcomeMessage) {
         binding.welcomeMessageTitle.text = welcomeMessage.title
         imageLoader.load(
-            "https://www.techyourchance.com/wp-content/uploads/2020/06/dagger_hilt.jpeg",
+            vasiliyZukanovImage,
             binding.welcomeMessageImageView
         )
+    }
+    companion object {
+        private const val vasiliyZukanovImage = "https://www.techyourchance.com/wp-content/uploads/2020/06/dagger_hilt.jpeg"
+
     }
 }

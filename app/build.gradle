@@ -41,22 +41,22 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "androidx.core:core-ktx:$core_version"
-    implementation "androidx.appcompat:appcompat:$app_compat_version"
-    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
-    implementation project(':imagesloader')
-    implementation project(':scopedscreen')
+    implementation Libs.kotlin_stdlib
+    implementation Libs.core_ktx
+    implementation Libs.appcompat
+    implementation Libs.constraintlayout
+    implementation project(Modules.imagesloader)
+    implementation project(Modules.scopedscreen)
 
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    testImplementation "org.junit.jupiter:junit-jupiter-api:$junit_version"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junit_version"
-    testImplementation "org.junit.jupiter:junit-jupiter-params:$junit_version"
-    testImplementation "org.mockito:mockito-core:$mockito_core_version"
-    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_kotlin_version"
+    androidTestImplementation Libs.espresso_core
+    testImplementation Libs.junit_jupiter_api
+    testRuntimeOnly Libs.junit_jupiter_engine
+    testImplementation Libs.junit_jupiter_params
+    testImplementation Libs.mockito_core
+    testImplementation Libs.mockito_kotlin
 
-    implementation "com.google.dagger:hilt-android:$hilt_version"
-    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    implementation Libs.hilt_android
+    kapt Libs.hilt_android_compiler
 }
 
 kapt {

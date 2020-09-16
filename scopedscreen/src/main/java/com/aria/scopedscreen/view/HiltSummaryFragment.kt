@@ -7,25 +7,24 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.aria.scopedscreen.R
 import com.aria.scopedscreen.contract.HiltSummaryContract
+import com.aria.scopedscreen.databinding.FragmentHiltSummaryBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class HiltSummaryFragment : Fragment(), HiltSummaryContract.View {
+class HiltSummaryFragment : Fragment(R.layout.fragment_hilt_summary), HiltSummaryContract.View {
 
     @Inject
     lateinit var presenter: HiltSummaryContract.Presenter
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_hilt_summary, container, false)
-    }
+    lateinit var fragmentHiltSummaryBinding: FragmentHiltSummaryBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val binding = FragmentHiltSummaryBinding.bind(view)
+        fragmentHiltSummaryBinding = binding
+
         presenter.onViewCreated()
     }
 

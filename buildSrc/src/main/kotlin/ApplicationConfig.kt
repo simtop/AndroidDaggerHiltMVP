@@ -1,5 +1,5 @@
 object ApplicationConfig {
-    val id = "AndroidDaggerHilt"
+    val id = "com.aria.androiddaggerhilt"
 
     const val compileSdk = 29
     const val minSdk = 21
